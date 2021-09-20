@@ -1,0 +1,13 @@
+.country_container{
+    background-color: lightgreen;
+    border: 5px solid green;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    margin: 20px;
+    padding: 5px;
+}
+
+.country_container img{
+    height: 100px;
+    width: 150px;
+}
