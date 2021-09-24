@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Cosmetics from './Components/Cosmetics/Cosmetics';
+import Persons from './Components/Persons/Persons';
 
 function App() {
   const num1 = 120;
@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <Cosmetics num1={num1} num2={num2}></Cosmetics>
+      <Persons></Persons>
     </div>
   );
 }
