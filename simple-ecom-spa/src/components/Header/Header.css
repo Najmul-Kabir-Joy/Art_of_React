@@ -1,0 +1,29 @@
+.header_logo{
+    height: auto;
+    width: 450px;
+    display: block;
+    margin: auto;
+}
+
+.header nav{
+    background-color: black;
+    line-height: 50px;
+}
+
+.header nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding: 13px;
+    font-size: 1.2em;
+}
+
+.header nav a:first-child{
+    margin-left: 40px;
+}
+
+.header nav a:hover{
+    background-color: lightgray;
+    padding: 13px;
+    color:black;
+}
