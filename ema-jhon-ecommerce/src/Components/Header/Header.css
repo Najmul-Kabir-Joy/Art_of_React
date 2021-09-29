@@ -1,0 +1,44 @@
+.logo-brand{
+    height: 150px;
+    width: 500px;
+    display: block;
+    margin: auto;
+}
+
+.navigation-bar{
+    background-color: black;
+    line-height: 50px;
+}
+.navigation-bar a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding: 15px;
+    font-weight: bold;
+
+}
+
+.navigation-bar a:first-child{
+    margin-left: 50px;
+}
+
+.navigation-bar a:hover{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.search-bar-container{
+    background-color: gray;
+    padding: 5px;
+}
+
+.search-bar{
+    width: 75%;
+    display: block;
+    margin: auto;
+    line-height: 25px;
+    padding: 10px;
+    font-size: 1.2em;
+}
