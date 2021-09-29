@@ -7,10 +7,14 @@ import './Shop.css'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [displayProducts, setDisplayProducts] = useState([]);
     useEffect(() => {
         fetch('./products.json')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => {
+                setProducts(data);
+                setDisplayProducts(data);
+            })
     }, [])
     useEffect(() => {
         const savedCart = getStoredCart();
@@ -34,17 +38,27 @@ const Shop = () => {
         setCart(newCart);
         addToDb(product.key)
     }
+    const handleSearch = (event) => {
+        const searchText = event.target.value;
+        const matched = products.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase()));
+        setDisplayProducts(matched);
+    }
     return (
-        <div className='shop-container'>
-            <div className="products-container">
-                {
-                    products.map(product => <Product product={product} key={product.key} handleAddtoCart={handleAddtoCart}></Product>)
-                }
+        <>
+            <div className="search-bar-container">
+                <input type="text" onChange={handleSearch} className='search-bar' placeholder='search for products' />
             </div>
-            <div className="cart-container">
-                <Cart cart={cart}></Cart>
+            <div className='shop-container'>
+                <div className="products-container">
+                    {
+                        displayProducts.map(product => <Product product={product} key={product.key} handleAddtoCart={handleAddtoCart}></Product>)
+                    }
+                </div>
+                <div className="cart-container">
+                    <Cart cart={cart}></Cart>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

@@ -29,16 +29,3 @@
     font-weight: bold;
 }
 
-.search-bar-container{
-    background-color: gray;
-    padding: 5px;
-}
-
-.search-bar{
-    width: 75%;
-    display: block;
-    margin: auto;
-    line-height: 25px;
-    padding: 10px;
-    font-size: 1.2em;
-}

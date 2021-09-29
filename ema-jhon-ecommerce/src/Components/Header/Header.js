@@ -11,10 +11,7 @@ const Header = () => {
                 <a href="/order">Order Review</a>
                 <a href="/inventory">Manage Inventory</a>
             </nav>
-            <div className="search-bar-container">
-                <input type="text" className='search-bar' placeholder='search for products' />
 
-            </div>
         </div>
     );
 };
