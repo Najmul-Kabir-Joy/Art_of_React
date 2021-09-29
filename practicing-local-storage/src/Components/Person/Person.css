@@ -1,0 +1,29 @@
+.person{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid slateblue;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 10px;
+    height: 350px;
+}
+.person button{
+    background-color: greenyellow;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover{
+    background-color: green;
+}
+.person-image,.person-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person-details{
+    text-align: start;
+}
