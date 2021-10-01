@@ -1,0 +1,24 @@
+.logo-container img{
+    width: auto;
+    height: 100px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+}
+.navbar-container{
+    background-color: lightblue;
+    line-height: 50px;
+}
+.navbar-container a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 30px;
+    padding: 10px;
+    color: black;
+}
+.navbar-container a:hover{
+    background-color: skyblue;
+}
+.navbar-container a:first-child{
+    margin-left: 30px;
+}
