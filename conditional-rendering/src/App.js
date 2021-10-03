@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { createContext, useState } from 'react';
 import User from './Components/User/User';
@@ -15,10 +14,10 @@ function App() {
   return (
     <RingContext.Provider value={ornaments}>
       <div className="App">
-        {/* <h2>Is Familiar: {familiar.toString()}</h2>
-      <button onClick={() => setFamiliar(!familiar)}
-      >Toggle Friend</button>
-      <User familiar={familiar}></User> */}
+        <h2>Is Familiar: {familiar.toString()}</h2>
+        <button onClick={() => setFamiliar(!familiar)}
+        >Toggle Friend</button>
+        <User familiar={familiar}></User>
         <button onClick={buyHandle}>new house</button>
         <Grandfather house={house} ornaments={ornaments}>
 
