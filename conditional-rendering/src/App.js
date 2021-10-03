@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import User from './Components/User/User';
 import Grandfather from './Components/GrandFather/Grandfather';
 
+export const RingContext = createContext('ring');
 function App() {
   let [house, setHouse] = useState(5);
   const ornaments = 'diamond necklace';
@@ -12,16 +13,18 @@ function App() {
   }
   const [familiar, setFamiliar] = useState(false);
   return (
-    <div className="App">
-      {/* <h2>Is Familiar: {familiar.toString()}</h2>
+    <RingContext.Provider value={ornaments}>
+      <div className="App">
+        {/* <h2>Is Familiar: {familiar.toString()}</h2>
       <button onClick={() => setFamiliar(!familiar)}
       >Toggle Friend</button>
       <User familiar={familiar}></User> */}
-      <button onClick={buyHandle}>new house</button>
-      <Grandfather house={house} ornaments={ornaments}>
+        <button onClick={buyHandle}>new house</button>
+        <Grandfather house={house} ornaments={ornaments}>
 
-      </Grandfather>
-    </div>
+        </Grandfather>
+      </div>
+    </RingContext.Provider>
   );
 }
 
