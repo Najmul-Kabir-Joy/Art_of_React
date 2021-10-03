@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.App div{
+  border: 2px solid skyblue;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
