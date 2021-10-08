@@ -7,6 +7,9 @@ import Notfound from './Components/Notfound/Notfound';
 import Header from './Components/Header/Header';
 import FriendDetail from './Components/FriendDetail/FriendDetail';
 import Culture from './Components/Culture/Culture';
+import Posts from './Components/Posts/Posts';
+import Postdetail from './Components/Postdetail/Postdetail';
+import Post from './Components/Post/Post';
 function App() {
   return (
     <div className="App">
@@ -27,6 +30,12 @@ function App() {
           </Route>
           <Route exact path='/about'>
             <About></About>
+          </Route>
+          <Route path='/posts'>
+            <Posts></Posts>
+          </Route>
+          <Route path='/post/:postId'>
+            <Postdetail></Postdetail>
           </Route>
           <Route exact path='/about/culture'>
             <Culture></Culture>
