@@ -1,10 +1,11 @@
 import './App.css';
 import initAuth from './Firebase/firebase.init';
-import { getAuth, sendPasswordResetEmail, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, createUserWithEmailAndPassword } from 'firebase/auth'
+import { getAuth, updateProfile, sendPasswordResetEmail, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, signOut, createUserWithEmailAndPassword } from 'firebase/auth'
 import { useState } from 'react';
 
 initAuth();
 function App() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [users, setUsers] = useState({});
@@ -74,6 +75,7 @@ function App() {
         console.log(user);
         setError('');
         emailVerify();
+        setUserName();
       })
       .catch(error => {
         setError(error.message)
@@ -91,10 +93,25 @@ function App() {
         console.log(result);
       })
   }
+  const handleName = (e) => {
+    setName(e.target.value);
+  }
+  const setUserName = () => {
+    updateProfile(auth.currentUser, { displayName: name })
+      .then(result => { })
+  }
   return (
-    <div className="">
+    <div className="mx-5">
       <form onSubmit={handleRegistration}>
         <h3 className='text-primary text-center'>Please {isLogin ? 'Login' : 'Register'}</h3>
+        {!isLogin &&
+          <div className="row mb-3">
+            <label htmlFor="name" className="col-sm-2 col-form-label">Name</label>
+            <div className="col-sm-10">
+              <input onBlur={handleName} type="name" className="form-control" id="name" required />
+            </div>
+          </div>}
+
         <div className="row mb-3">
           <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
           <div className="col-sm-10">
