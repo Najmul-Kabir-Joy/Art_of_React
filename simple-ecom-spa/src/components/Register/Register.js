@@ -17,6 +17,8 @@ const Register = () => {
                     <input type="submit" value="Register" />
                 </form>
                 <p>Already have an account? <Link to='/login'>Login</Link></p>
+                <div>-----OR-----</div>
+                <button className="btn-purchase">GOOGLE SIGN IN</button>
             </div>
         </div>
     );
