@@ -1,0 +1,11 @@
+.register-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container input{
+    line-height: 25px;
+    margin: 5px;
+    padding: 5px;
+}
