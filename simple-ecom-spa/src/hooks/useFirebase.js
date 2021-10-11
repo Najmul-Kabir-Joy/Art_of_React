@@ -7,8 +7,7 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
 
     const signInGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(res => { })
+        return signInWithPopup(auth, googleProvider)
     }
 
 
@@ -31,8 +30,9 @@ const useFirebase = () => {
     return {
         user,
         signInGoogle,
-        useFirebase,
         logOut
     }
 
 }
+
+export default useFirebase;
